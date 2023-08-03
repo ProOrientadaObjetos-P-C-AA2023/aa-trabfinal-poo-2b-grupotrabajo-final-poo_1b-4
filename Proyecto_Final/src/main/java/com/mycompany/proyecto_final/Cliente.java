@@ -14,6 +14,7 @@ public class Cliente {
     public PlanPostPagoMinutosMegasEconomico plan1;
     public PlanPostPagoMinutos plan2;
     public PlanPostPagoMegas plan3;
+    public PlanPostPagoMinutosMegas plan4;
 
     public Cliente(String nombres, String ceduPas, String ciudad, String marca, String modelo, String numero, double pagoMensual, String correo, String direccion) {
         this.nombres = nombres;
@@ -102,8 +103,6 @@ public class Cliente {
     public void agregarPlan1(PlanPostPagoMinutosMegasEconomico plan) {
         if (plan1 == null) {
             plan1 = plan;
-        } else if (plan2 == null) {
-            plan2 = plan;
         } else {
             System.out.println("El cliente ya tiene asignados 2 tipos de planes.");
         }
@@ -124,12 +123,20 @@ public class Cliente {
             System.out.println("El cliente ya tiene asignado un tipo de plan.");
         }
     }
+    
+    public void agregarPlan4(PlanPostPagoMinutosMegas plan) {
+        if (plan4 == null) {
+            plan4 = plan;
+        } else {
+            System.out.println("El cliente ya tiene asignado un tipo de plan.");
+        }
+    }
+    
+    
 
     public void eliminarPlan(PlanPostPagoMinutosMegasEconomico plan) {
         if (plan1 == plan) {
             plan1 = null;
-        } else if (plan2 == plan) {
-            plan2 = null;
         } else {
             System.out.println("El cliente no tiene asignado este tipo de plan.");
         }
@@ -148,6 +155,14 @@ public class Cliente {
             plan3 = null;
         } else {
             System.out.println("El cliente no tiene asignado este tipo de plan.");
+        }
+    }
+    
+    public void eliminarPlan(PlanPostPagoMinutosMegas plan) {
+        if (plan4 != null) {
+            plan4 = null;
+        } else {
+            System.out.println("El cliente no tiene asignado el plan PlanPostPagoMinutosMegas.");
         }
     }
 
