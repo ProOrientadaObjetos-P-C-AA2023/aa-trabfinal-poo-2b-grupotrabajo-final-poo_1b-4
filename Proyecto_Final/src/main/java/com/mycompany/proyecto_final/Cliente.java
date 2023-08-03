@@ -15,6 +15,7 @@ public class Cliente {
     public PlanPostPagoMinutos plan2;
     public PlanPostPagoMegas plan3;
     public PlanPostPagoMinutosMegas plan4;
+    public int numeroPLanesAsignados= 0; 
 
     public Cliente(String nombres, String ceduPas, String ciudad, String marca, String modelo, String numero, double pagoMensual, String correo, String direccion) {
         this.nombres = nombres;
@@ -99,7 +100,7 @@ public class Cliente {
     public String getDireccion() {
         return direccion;
     }
-
+    //MÉTODOS PARA AGREGAR AL CLIENTE MÁXIMO 2 PLANES
     public void agregarPlan1(PlanPostPagoMinutosMegasEconomico plan) {
         if (plan1 == null) {
             plan1 = plan;
@@ -131,9 +132,7 @@ public class Cliente {
             System.out.println("El cliente ya tiene asignado un tipo de plan.");
         }
     }
-    
-    
-
+    //MÉTODOS PARA ELIMINA PLANES SI EL CLIENTE TINE MAXIMO 2 PLANES 
     public void eliminarPlan(PlanPostPagoMinutosMegasEconomico plan) {
         if (plan1 == plan) {
             plan1 = null;
@@ -165,10 +164,36 @@ public class Cliente {
             System.out.println("El cliente no tiene asignado el plan PlanPostPagoMinutosMegas.");
         }
     }
+    //VERIFICACION DEL CORREO ELECTRONICO
+     public boolean validarCorreo(String correo){
+       String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return correo.matches(regex);
+    }
 
     @Override
     public String toString() {
-        return "Cliente{" + "nombres=" + nombres + ", ceduPas=" + ceduPas + ", ciudad=" + ciudad + ", marca=" + marca + ", modelo=" + modelo + ", numero=" + numero + ", pagoMensual=" + pagoMensual + ", correo=" + correo + ", direccion=" + direccion + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente: ").append(nombres).append(" , Cédula/Pasaporte: ").append(ceduPas);
+        sb.append(" , Ciudad: ").append(ciudad).append(", Marca del Celular: ").append(marca);
+        sb.append(" , Modelo del Celular:").append(modelo).append(" , Número de Celular:").append(numero);
+        sb.append(" , Pago Mensual").append(pagoMensual).append(" , Correo:").append(correo);
+        sb.append(" , Direccion:").append(direccion);
+        
+        //PLANES DEL CLIENTE
+        sb.append("\n Planes Asignados:");
+        if (plan1 != null) {
+            sb.append("\n Plan PostPagoMinutosMegasEconomicos: ").append(plan1);
+        }
+        if (plan2 != null) {
+            sb.append("\n Plan PostPagoMinutos: ").append(plan2);
+        }
+        if (plan3 != null) {
+            sb.append("\n Plan PostPagoMegas: ").append(plan3);
+        }
+        if (plan4 != null) {
+            sb.append("\n Plan PostPagoMinutosMegas: ").append(plan4);
+        }
+        return sb.toString();
     }
 
 }

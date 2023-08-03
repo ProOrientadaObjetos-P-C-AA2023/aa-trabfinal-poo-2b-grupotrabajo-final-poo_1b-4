@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Proyecto_Final {
 
     public static void main(String[] args) {
-
+        
         Scanner scanner = new Scanner(System.in);
 
         // Solicitar datos del cliente
@@ -42,7 +42,7 @@ public class Proyecto_Final {
 
         // Crear cliente con los datos ingresados
         Cliente clientes = new Cliente(nombres, cedula, ciudad, marca, modelo, numeroCelular, pagoMensual, correo, dir);
-
+        
         int opcion;
         do {
             System.out.println("\n===PLANES DE PAGO===");
@@ -168,6 +168,7 @@ public class Proyecto_Final {
 
                 case 6:
                     System.out.println("Generando factura...");
+                    System.out.println(clientes.toString());
                     generarFactura(clientes);
                     break;
 
@@ -214,7 +215,7 @@ public class Proyecto_Final {
                     printWriter.println("Plan 4: " + cliente.plan4);
                 }
 
-                // Calcular el total a pagar
+                // TOTAL A PAGAR
                 double totalPagar = 0.0;
                 if (cliente.plan1 != null) {
                     totalPagar += cliente.plan1.pagoFinal;

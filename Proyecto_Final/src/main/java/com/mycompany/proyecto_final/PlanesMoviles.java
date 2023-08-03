@@ -65,8 +65,6 @@ public abstract class PlanesMoviles {
     @Override
     public String toString() {
         return "PlanesMoviles{" + "minutos=" + minutos + ", costoMinutos=" + costoMinutos + ", megasExpresadosGigas=" + megasExpresadosGigas + ", costoGiga=" + costoGiga + ", pagoFinal=" + pagoFinal + '}';
-    }
-    
-    
+    } 
     
 }
