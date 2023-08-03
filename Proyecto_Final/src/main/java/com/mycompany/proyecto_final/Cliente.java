@@ -15,7 +15,7 @@ public class Cliente {
     public PlanPostPagoMinutos plan2;
     public PlanPostPagoMegas plan3;
     public PlanPostPagoMinutosMegas plan4;
-    public int numeroPLanesAsignados= 0; 
+    public int numeroPLanesAsignados = 0; 
 
     public Cliente(String nombres, String ceduPas, String ciudad, String marca, String modelo, String numero, double pagoMensual, String correo, String direccion) {
         this.nombres = nombres;
