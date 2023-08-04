@@ -32,7 +32,7 @@ public class PlanPostPagoMinutos extends PlanesMoviles {
 
     @Override
     public String toString() {
-        return "PlanPostPagoMinutos{" + "minutosInt=" + minutosInt + ", costoMinutosInt=" + costoMinutosInt + '}';
+        return "PlanPostPagoMinutos{" + "minutosInt=" + minutosInt + ", costoMinutosInt=" + costoMinutosInt + '}' + super.toString();
     }
     
     

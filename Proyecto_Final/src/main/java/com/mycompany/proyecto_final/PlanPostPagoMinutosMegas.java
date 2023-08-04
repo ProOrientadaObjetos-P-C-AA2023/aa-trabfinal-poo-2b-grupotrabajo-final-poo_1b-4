@@ -12,7 +12,7 @@ public class PlanPostPagoMinutosMegas extends PlanesMoviles{
 
     @Override
     public String toString() {
-        return "PlanPostPagoMinutosMegas{" + '}';
+        return "PlanPostPagoMinutosMegas{" + '}' + super.toString();
     }
     
     

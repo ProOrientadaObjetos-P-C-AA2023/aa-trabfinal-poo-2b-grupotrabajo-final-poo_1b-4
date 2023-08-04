@@ -22,6 +22,6 @@ public class PlanPostPagoMegas extends PlanesMoviles {
 
     @Override
     public String toString() {
-        return "PlanPostPagoMegas{" + "tarifaBase=" + tarifaBase + '}';
+        return "PlanPostPagoMegas{" + "tarifaBase=" + tarifaBase + '}' + super.toString();
     }    
 }

@@ -1,11 +1,12 @@
-Nombre: edisson
+Nombre: Edisson
 Cédula/Pasaporte: 1950001733
-Ciudad: zamora
-Marca del celular: sansun
-Modelo del celular: galasi s9
+Ciudad: Zamora
+Marca del celular: Samsung
+Modelo del celular: Galaxy S9+
 Número de celular: 0962733227
-Pago mensual: 200.0
-Correo: chambaedisosn
-Dirección: av del ejercito
+Pago mensual: 20.0
+Correo: chambaedisson01@gmail.com
+Dirección: Av. del Ejercito
+Plan 1: PlanPostPagoMinutosMegasEconomico{PlanesMoviles{minutos=30.0, costoMinutos=1.0, megasExpresadosGigas=3000.0, costoGiga=9.0, pagoFinal=56.3671875}
 Plan 4: PlanPostPagoMinutosMegas{}
-Total a pagar: 0.0
+Total a pagar: 158.3671875

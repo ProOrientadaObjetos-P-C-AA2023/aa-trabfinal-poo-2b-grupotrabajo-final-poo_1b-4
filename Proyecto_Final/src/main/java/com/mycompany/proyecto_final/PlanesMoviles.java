@@ -1,5 +1,7 @@
 package com.mycompany.proyecto_final;
+
 public abstract class PlanesMoviles {
+
     public double minutos;
     public double costoMinutos;
     public double megasExpresadosGigas;
@@ -17,8 +19,6 @@ public abstract class PlanesMoviles {
         this.megasExpresadosGigas = megasExpresadosGigas;
         this.costoGiga = costoGiga;
     }
-    
-    
 
     public double getMinutos() {
         return minutos;
@@ -59,12 +59,18 @@ public abstract class PlanesMoviles {
     public void setDescuento(double pagoFinal) {
         this.pagoFinal = pagoFinal;
     }
-    
+
     public abstract void calcularCosto();
 
     @Override
     public String toString() {
-        return "PlanesMoviles{" + "minutos=" + minutos + ", costoMinutos=" + costoMinutos + ", megasExpresadosGigas=" + megasExpresadosGigas + ", costoGiga=" + costoGiga + ", pagoFinal=" + pagoFinal + '}';
-    } 
-    
+        return "PlanesMoviles{"
+                + "minutos=" + minutos
+                + ", costoMinutos=" + costoMinutos
+                + ", megasExpresadosGigas=" + megasExpresadosGigas
+                + ", costoGiga=" + costoGiga
+                + ", pagoFinal=" + pagoFinal
+                + '}';
+    }
+
 }

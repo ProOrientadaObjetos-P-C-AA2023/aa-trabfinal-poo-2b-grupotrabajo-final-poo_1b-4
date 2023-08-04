@@ -164,11 +164,6 @@ public class Cliente {
             System.out.println("El cliente no tiene asignado el plan PlanPostPagoMinutosMegas.");
         }
     }
-    //VERIFICACION DEL CORREO ELECTRONICO
-     public boolean validarCorreo(String correo){
-       String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
-        return correo.matches(regex);
-    }
 
     @Override
     public String toString() {

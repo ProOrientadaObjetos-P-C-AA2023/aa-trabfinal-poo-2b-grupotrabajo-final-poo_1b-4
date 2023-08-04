@@ -73,7 +73,7 @@ public class Proyecto_Final {
                     double costoMeg = scanner.nextDouble();
 
                     PlanPostPagoMinutosMegasEconomico planEconomico = new PlanPostPagoMinutosMegasEconomico(minutos, costoMin, megas, costoMeg);
-
+                    planEconomico.calcularCosto();
                     // Asignar el plan PostPagoMinutosMegasEconomico al cliente
                     clientes.agregarPlan1(planEconomico);
                     break;
@@ -94,6 +94,7 @@ public class Proyecto_Final {
                     double costoIn = scanner.nextDouble();
 
                     PlanPostPagoMinutos planMinutos = new PlanPostPagoMinutos(minutosNac, costoNac, minIn, costoIn);
+                    planMinutos.calcularCosto();
                     // Asignar el plan PostPagoMinutos al cliente
                     clientes.agregarPlan2(planMinutos);
                     break;
@@ -111,6 +112,7 @@ public class Proyecto_Final {
                     double tarifa = scanner.nextDouble();
 
                     PlanPostPagoMegas planMegas = new PlanPostPagoMegas(tarifa, megass, costoMegass);
+                    planMegas.calcularCosto();
                     // Asignar el plan PostPagoMegas al cliente
                     clientes.agregarPlan3(planMegas);
                     break;
@@ -131,6 +133,7 @@ public class Proyecto_Final {
                     double costo = scanner.nextDouble();
 
                     PlanPostPagoMinutosMegas planMinutosMegas = new PlanPostPagoMinutosMegas(minutoss, costoMinn, megasGig, costo);
+                    planMinutosMegas.calcularCosto();
                     // Asignar el plan PostPagoMinutosMegas al cliente
                     clientes.agregarPlan4(planMinutosMegas);
                     break;
@@ -142,7 +145,7 @@ public class Proyecto_Final {
                     System.out.println("2. PlanPostPagoMinutos");
                     System.out.println("3. PlanPostPagoMegas");
                     System.out.println("4. PlanPostPagoMinutosMegas");
-                    int opcionEliminar = Integer.parseInt(scanner.nextLine());
+                    int opcionEliminar = scanner.nextInt();
 
                     switch (opcionEliminar) {
                         case 1:
